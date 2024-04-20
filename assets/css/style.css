@@ -297,29 +297,63 @@ section {
   margin-bottom: 0;
 }
 
-
-.section-title .btn-cinta {
-  background-color: rgb(61, 6, 93);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
+.section-title {
+  .col-md-6 {
+    margin-left: 5%;
 }
 
-.section-title .btn-cinta::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -20px;
-  border-style: solid;
-  border-width: 0 20px 10px 0;
-  border-color: transparent rgb(61, 6, 93) transparent transparent;
+button {
+    margin: 20px 0;
+    line-height: 34px;
+    background-color: purple;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    outline: none !important;
+    width: 100%;
 }
 
+button:active {
+    outline: none;
+    background-color: rgb(240, 67, 240);    
+}
 
+button.ribbon {
+    outline: none;
+    outline-color: transparent;
+}
+
+button.ribbon:before,
+button.ribbon:after {
+    top: 5px;
+    z-index: -10;
+}
+
+button.ribbon:before {
+    border-color: purple purple purple transparent;
+    left: -25px;
+    border-width: 17px;
+}
+
+button.ribbon:after {
+    border-color: purple transparent purple purple;
+    right: -25px;
+    border-width: 17px;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 0;
+    outline: none;
+}
+
+}
 
 /*--------------------------------------------------------------
 # Contact Us
@@ -406,8 +440,39 @@ section {
   display: block;
 }
 
+/* Estilo para hacer los iconos más pequeños */
+.contact .modal-body ul.list-unstyled i {
+  font-size: x-large; /* Tamaño de fuente más pequeño */
+}
+
 .contact .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
+}
+/* Estilo personalizado para el botón */
+.btn-custom-modal {
+  border: 2px solid purple; /* Borde púrpura */
+  background-color: white; /* Fondo blanco */
+  color: purple; /* Texto púrpura */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+
+.btn-custom-regalo {
+  border: 2px solid purple;
+  background-color: white;
+  color: purple;
+}
+
+.btn-custom-regalo:hover,
+.btn-custom:focus {
+  background-color: purple;
+  color: white;
+}
+
+.app-icon {
+  width: 16px;
+  height: 16px;
 }
 
 

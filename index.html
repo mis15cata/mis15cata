@@ -21,9 +21,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+  <link href="assets/css/style.css" rel="stylesheet">  
 
 </head>
 
@@ -70,7 +68,7 @@
           
             <h2>
               <img src="assets/img/comillas.png" class="float-left" alt="comillas"><br>
-              Te espero para compartir la alegría de esa noche que será para mi mágica, inolvidable y única.<br>
+              Te espero para compartir la alegría de esa noche que será mágica, inolvidable y única para mi.<br>
               <img src="assets/img/comillas.png" class="float-right" alt="Comillas">
             </h2>
           
@@ -79,15 +77,21 @@
           <div class="col-md-4">
             <div class="fiesta">
                             
-              <h2><img src="assets/img/confetti-izq-128.png" class="float-left" alt="confeti">
+              <h1><img src="assets/img/confetti-izq-128.png" class="float-left" alt="confeti">
                 FIESTA
                 <img src="assets/img/confetti-der-128.png" class="float-right" alt="confeti">
-              </h2>
-              <h4>Día 11 de mayo</h4>
-              <h4>20:30 hs</h4>
-              <p>
-                <a class="btn-cinta" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Fiesta&dates=20240511T203000Z/20240511T220000Z&location=Diag%2074%20N%C2%BA%201555%20entre%2011%20y%2056">Agendar</a>
-              </p>
+              </h1>
+              <h2>Día 11 de mayo</h2>
+              <h2>20:30 hs</h2>
+              <div class="container">
+                               
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-purple ribbon">Agéndalo</button>
+                    </div>
+                </div>
+            </div>
+            
             </div>
           </div>
 
@@ -106,17 +110,20 @@
 
           <div class="col-md-4">
             <div class="contact-phone">
-              <i class="bi bi-phone"></i>
-              <h1>Celular</h1>
-              <p><a href="tel:+542216229999" class="btn custom-btn">+2216229999</a></p>
+              <i class="bi bi-whatsapp"></i>
+              <h1>Confirmame</h1>
+              <p><a href="https://wa.me/542213069974?text=Nos%20vemos%20en%20la%20fiesta%20%3B%29" class="btn custom-btn">Espero tu mensaje</a></p>             
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-email">
-              <i class="bi bi-envelope"></i>
-              <h1>Email</h1>
-              <p><a href="mailto:emanuelrodriguez644@gmai.com" class="btn custom-btn">mis15cata@gmail.com</a></p>
+               <!-- <img src="assets/img/party-hat-48.png" class="float-right" alt="Comillas"> -->
+               <i class="bi bi-emoji-sunglasses"></i>
+               <h1>Dress Code</h1>              
+               <!-- Botón para abrir el modal -->
+               <p><button type="button" class="btn custom-btn" data-toggle="modal" data-target="#partyModal">Qué me pongo?</button>
+               </p>              
             </div>
           </div>
 
@@ -126,14 +133,10 @@
 
           <div class="col-md-4">
             <div class="contact-address">
-              <img src="assets/img/party-hat-48.png" class="float-right" alt="Comillas">
-              <h1>Dress Code</h1>
-              <!-- Botón para abrir el modal -->
-              <p><button type="button" class="btn custom-btn" data-toggle="modal" data-target="#partyModal">Qué me pongo?</button>
-              </p>
-          
-              
-          
+              <i class="bi bi-envelope"></i>
+              <h1>Email</h1>
+              <p><a href="mailto:emanuelrodriguez644@gmai.com" class="btn custom-btn">mis15cata@gmail.com</a></p>
+                        
             </div>
           </div>
 
@@ -143,35 +146,61 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="partyModalLabel">Qué me pongo?</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                 </div>
                 <div class="modal-body text-center">
-                  <img src="assets/img/party-hat-48.png" alt="Party Hat" class="img-fluid mb-3">
-                  <p><strong>Código de Vestimenta:</strong> Casual</p>
+                  <img src="assets/img/dress-purple.png" alt="Party Hat" class="img-fluid mb-3">
+                  <p><strong>Código de Vestimenta:</strong></p>
+                  <!-- Lista con iconos -->
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-emoji-wink-fill"></i> Elegante sport</li>
+                    <li><i class="bi bi-emoji-frown-fill"></i> No vistas de lila o violeta</li>
+                  </ul>
+                  <!-- Botón -->
+                  <button type="button" class="btn btn-custom-modal" data-dismiss="modal">OK!</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="bi bi-whatsapp"></i>
-              <h1>Confirmame</h1>
-              <p><a href="https://wa.me/542213069974?text=Nos%20vemos%20en%20la%20fiesta%20%3B%29" class="btn custom-btn">Espero tu mensaje</a></p>
-            </div>
-          </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="bi bi-camera"></i>
-              <h1>#15Cata</h1>
-              <p>Publicá fotos de mis 15 con el #15cata</p>
+              <h1>#15Cata</h1>              
               <p><a href="https://www.instagram.com/catalinarodriguezcepeda/" class="btn custom-btn">Publicá</a></p>
 
             </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-gift"></i>
+              <h1>Regalos</h1>
+              <p>alias Catu.Rodriguez.</p>
+              <div class="dropdown">
+                <button class="btn btn-custom-regalo dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Selecciona una aplicación
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=com.mercadopago.wallet;end">
+                    <img src="assets/img/mp.webp" alt="Mercado Pago" class="app-icon"> Mercado Pago
+                  </a>
+                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=ar.com.bancoprovincia.CuentaDNI;end">
+                    <img src="assets/img/dni.webp" alt="Cuenta DNI" class="app-icon"> Cuenta DNI
+                  </a>
+                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=com.playdigital.modo;end">
+                    <img src="assets/img/modo.webp" alt="Modo" class="app-icon"> Modo
+                  </a>
+                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=com.mosync.app_Banco_Galicia;end">
+                    <img src="assets/img/gal.webp" alt="Banco Galicia" class="app-icon"> Banco Galicia
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+         
           
 
         </div>
