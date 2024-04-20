@@ -319,6 +319,8 @@ section {
   border-color: transparent rgb(61, 6, 93) transparent transparent;
 }
 
+
+
 /*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
@@ -360,6 +362,55 @@ section {
 .contact .contact-email {
   margin-bottom: 20px;
 }
+
+.contact .custom-btn {
+  background-color: transparent; /* Cambiamos el color de fondo a transparente */
+  border: 2px solid purple; /* Establecemos un borde violeta */
+  border-radius: 20px;
+  color: purple; /* Cambiamos el color del texto a violeta */
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave */
+}
+.contact .custom-btn:hover {
+  background-color: purple; /* Cambia el color de fondo al pasar el cursor */
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+.contact .custom-btn:active {
+  background-color: transparent; /* Vuelve a transparente cuando se hace clic */
+  color: purple; /* Vuelve a violeta cuando se hace clic */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset; /* Agregamos un efecto de destello al hacer clic */
+}
+
+
+.contact .modal-dialog-alert {
+  max-width: 400px; /* Ajusta el ancho del modal según sea necesario */
+  border-radius: 20px;
+}
+
+.contact .modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact .modal-header {
+  border-bottom: none;
+}
+
+.contact .modal-body img {
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.contact .modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+}
+
+
 
 .contact .php-email-form .error-message {
   display: none;
