@@ -27,6 +27,12 @@
 
 <body>
 
+  <audio id="miCancion" src="assets/img/Butter.mp3" autoplay loop></audio>
+
+  <div class="musica-control">
+    <i id="toggleMusica" class="bi bi-music-note-beamed"></i>
+  </div>
+
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -77,14 +83,13 @@
           <div class="col-md-4">
             <div class="fiesta">
                             
-              <h1><img src="assets/img/confetti-izq-128.png" class="float-left" alt="confeti">
+              <h1><img src="assets/img/confetti-izq-128.png" class="float-left-f" alt="confeti">
                 FIESTA
-                <img src="assets/img/confetti-der-128.png" class="float-right" alt="confeti">
+                <img src="assets/img/confetti-der-128.png" class="float-right-f" alt="confeti">
               </h1>
               <h2>Día 11 de mayo</h2>
               <h2>20:30 hs</h2>
-              <div class="container">
-                               
+              <div class="container">                               
                 <div class="row">
                     <div class="col-md-6">
                         <button type="button" class="btn btn-purple ribbon">Agéndalo</button>
@@ -102,9 +107,10 @@
           <div class="col-md-4">
             <div class="contact-address">
               <i class="bi bi-geo-alt"></i>
-              <h1>Dirección</h1>
-              <address>Diag 74 Nº 1555 entre 11 y 56</address>              
+              <h1>Lugar</h1>
+              <address>Diag 73 Nº 1555 entre 11 y 56</address>              
               <p><a href="https://maps.app.goo.gl/tmGdBGUaWR1y4P9XA" class="btn custom-btn">Circulo Italiano, Salon Florencia</a></p>
+              <h6>Hace click!</h6>
             </div>
           </div>
 
@@ -112,7 +118,8 @@
             <div class="contact-phone">
               <i class="bi bi-whatsapp"></i>
               <h1>Confirmame</h1>
-              <p><a href="https://wa.me/542213069974?text=Nos%20vemos%20en%20la%20fiesta%20%3B%29" class="btn custom-btn">Espero tu mensaje</a></p>             
+              <p><a href="https://wa.me/542216229999?text=Nos%20vemos%20en%20la%20fiesta%20%3B%29" class="btn custom-btn">Espero tu mensaje</a></p>             
+              <h6>Hace click!</h6>
             </div>
           </div>
 
@@ -123,6 +130,7 @@
                <h1>Dress Code</h1>              
                <!-- Botón para abrir el modal -->
                <p><button type="button" class="btn custom-btn" data-toggle="modal" data-target="#partyModal">Qué me pongo?</button>
+                <h6>Hace click!</h6>
                </p>              
             </div>
           </div>
@@ -133,10 +141,11 @@
 
           <div class="col-md-4">
             <div class="contact-address">
-              <i class="bi bi-envelope"></i>
-              <h1>Email</h1>
-              <p><a href="mailto:emanuelrodriguez644@gmai.com" class="btn custom-btn">mis15cata@gmail.com</a></p>
-                        
+              <i class="bi bi-camera"></i>
+              <h1>Album</h1>
+              <h3>Compartime tus fotos</h3>
+              <p><a href="https://drive.google.com/drive/folders/1YHdFvyt5nY396D4zCU3fmrWD-_vw-GOM?usp=drive_link" class="btn custom-btn">Subí fotos</a></p>                        
+              <h6>Hace click!</h6>
             </div>
           </div>
 
@@ -165,10 +174,11 @@
 
           <div class="col-md-4">
             <div class="contact-phone">
-              <i class="bi bi-camera"></i>
-              <h1>#15Cata</h1>              
+              <i class="bi bi-instagram"></i>
+              <h1><a href="https://www.instagram.com/explore/tags/15cata/" target="_blank">#15Cata</a></h1> 
+              <h3>Compartí tus fotos y videos de ese hermoso día              </h3>             
               <p><a href="https://www.instagram.com/catalinarodriguezcepeda/" class="btn custom-btn">Publicá</a></p>
-
+              <h6>Hace click!</h6>
             </div>
           </div>
 
@@ -182,26 +192,22 @@
                   Selecciona una aplicación
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=com.mercadopago.wallet;end">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=com.mercadopago.wallet', 'https://www.mercadopago.com/')">
                     <img src="assets/img/mp.webp" alt="Mercado Pago" class="app-icon"> Mercado Pago
                   </a>
-                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=ar.com.bancoprovincia.CuentaDNI;end">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=ar.com.bancoprovincia.CuentaDNI', 'https://www.bancoprovincia.com.ar/')">
                     <img src="assets/img/dni.webp" alt="Cuenta DNI" class="app-icon"> Cuenta DNI
                   </a>
-                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=com.playdigital.modo;end">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=com.playdigital.modo', 'https://www.modo.com.ar/')">
                     <img src="assets/img/modo.webp" alt="Modo" class="app-icon"> Modo
                   </a>
-                  <a class="dropdown-item" href="intent://scan/#Intent;scheme=market://details?id=com.mosync.app_Banco_Galicia;end">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=com.mosync.app_Banco_Galicia', 'https://www.bancogalicia.com.ar/')">
                     <img src="assets/img/gal.webp" alt="Banco Galicia" class="app-icon"> Banco Galicia
                   </a>
                 </div>
               </div>
-              
             </div>
-          </div>
-
-         
-          
+          </div>         
 
         </div>
 
@@ -234,9 +240,54 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  
 
+  <!-- abbre app android -->
+  <script>
+    function openAppOrWebsite(androidIntent, websiteUrl) {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      
+      // Verifica si el usuario está en un dispositivo Android
+      if (/android/i.test(userAgent)) {
+        // Abre el enlace de intención de Android
+        window.location.href = androidIntent;
+      } else {
+        // Si no, abre el sitio web normalmente
+        window.location.href = websiteUrl;
+      }
+    }
+    </script>
+    
+    <!--Musica desde youtube-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const miCancion = document.getElementById("miCancion");
+        const toggleMusica = document.getElementById("toggleMusica");
+
+        // Establece el volumen al 50%
+        miCancion.volume = 0.5;
+
+        // Reproduce la canción
+        miCancion.play();
+
+        toggleMusica.addEventListener("click", function () {
+          if (miCancion.paused) {
+            miCancion.play();
+            toggleMusica.classList.remove("fa-play");
+            toggleMusica.classList.add("fa-pause");
+          } else {
+            miCancion.pause();
+            toggleMusica.classList.remove("fa-pause");
+            toggleMusica.classList.add("fa-play");
+          }
+        });
+      });
+    </script>
+
+<!-- Enlaces a los archivos JavaScript y las bibliotecas de iconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

@@ -32,6 +32,23 @@ h6,
   font-family: "Raleway", sans-serif;
 }
 
+
+.musica-control {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.musica-control i {
+  font-size: 30px;
+  color: purple;
+  background-color: rgba(243, 170, 243, 0.247);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -301,6 +318,17 @@ section {
   .col-md-6 {
     margin-left: 5%;
 }
+.float-left-f {
+  float: left;
+  width: 96px;
+  height: 96px;
+}
+
+.float-right-f {
+  float: right;
+  width: 96px;
+  height: 96px;
+}
 
 button {
     margin: 20px 0;
@@ -311,7 +339,7 @@ button {
     cursor: pointer;
     user-select: none;
     outline: none !important;
-    width: 100%;
+    width: 80%;
 }
 
 button:active {
