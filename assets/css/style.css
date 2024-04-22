@@ -133,16 +133,24 @@ h6,
   padding: 0 15px;
 }
 
-#hero h1 {
+#hero .hero-container h1{
   margin: 0 0 0 0;
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fff;
+  color: purple;
+  text-shadow: 0 0 20px rgba(253, 253, 253, 0.822);
 }
 
-#hero h2 {
+#hero .hero-container h2 {
+  margin-top: 15px;
+  color: #eee;
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+#hero .hero-container h3 {
+  margin-top: 15px;
   color: #eee;
   margin-bottom: 30px;
   font-size: 24px;
@@ -181,16 +189,20 @@ h6,
   padding: 15px;
 }
 
-#hero .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading-notify 1s linear infinite;
+.corazon-falta {  
+  animation: blink-animation 2s infinite; /* Define la animación */
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1; /* Comienza con opacidad 1 */
+  }
+  50% {
+    opacity: 0; /* Opacidad 0 a la mitad del tiempo */
+  }
+  100% {
+    opacity: 1; /* Opacidad 1 al final */
+  }
 }
 
 @keyframes animate-loading-notify {
@@ -330,6 +342,8 @@ section {
   height: 96px;
 }
 
+
+
 button {
     margin: 20px 0;
     line-height: 34px;
@@ -346,6 +360,12 @@ button:active {
     outline: none;
     background-color: rgb(240, 67, 240);    
 }
+button:hover {
+    outline: none;
+    background-color: purple;    
+    color: #fff;
+}
+
 
 button.ribbon {
     outline: none;
@@ -378,7 +398,8 @@ button:after {
     width: 0;
     border-style: solid;
     border-width: 0;
-    outline: none;
+    outline:rgb(129, 2, 202);
+    background-color: purple purple purple transparent
 }
 
 }
