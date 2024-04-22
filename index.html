@@ -115,7 +115,7 @@
               <i class="bi bi-geo-alt"></i>
               <h1>Lugar</h1>
               <address>Diag 73 Nº 1555 entre 11 y 56</address>              
-              <p><a href="https://maps.app.goo.gl/tmGdBGUaWR1y4P9XA" class="btn custom-btn">Circulo Italiano, Salon Florencia</a></p>
+              <p><a href="https://maps.app.goo.gl/xFdtED6YBYtgBDQQ7" class="btn custom-btn">Circulo Italiano, Salon Florencia</a></p>
               <h6>Hace click!</h6>
             </div>
           </div>
@@ -198,22 +198,23 @@
                   Selecciona una aplicación
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=com.mercadopago.wallet', 'https://www.mercadopago.com/')">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('intent://#Intent;package=com.mercadopago.wallet;scheme=mercado;end;', 'https://www.mercadopago.com/')">
                     <img src="assets/img/mp.webp" alt="Mercado Pago" class="app-icon"> Mercado Pago
                   </a>
-                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=ar.com.bancoprovincia.CuentaDNI', 'https://www.bancoprovincia.com.ar/')">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('intent://#Intent;package=ar.com.bancoprovincia.CuentaDNI;scheme=bancoprovincia;end;', 'https://www.bancoprovincia.com.ar/')">
                     <img src="assets/img/dni.webp" alt="Cuenta DNI" class="app-icon"> Cuenta DNI
                   </a>
-                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=com.playdigital.modo', 'https://www.modo.com.ar/')">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('intent://#Intent;package=com.playdigital.modo;scheme=modo;end;', 'https://www.modo.com.ar/')">
                     <img src="assets/img/modo.webp" alt="Modo" class="app-icon"> Modo
                   </a>
-                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('market://details?id=com.mosync.app_Banco_Galicia', 'https://www.bancogalicia.com.ar/')">
+                  <a class="dropdown-item" href="#" onclick="openAppOrWebsite('intent://#Intent;package=com.mosync.app_Banco_Galicia;scheme=bancogalicia;end;', 'https://www.bancogalicia.com.ar/')">
                     <img src="assets/img/gal.webp" alt="Banco Galicia" class="app-icon"> Banco Galicia
                   </a>
                 </div>
               </div>
             </div>
-          </div>         
+          </div>
+                  
 
         </div>
 
@@ -288,17 +289,24 @@
         });
       });
     </script>
-
+    
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    const agendaButton = document.getElementById("agendaButton");
+      document.addEventListener("DOMContentLoaded", function () {
+        const agendaButton = document.getElementById("agendaButton");
 
-    agendaButton.addEventListener("click", function() {
-        window.open("https://maps.app.goo.gl/xFdtED6YBYtgBDQQ7");
-    });
-});
+        agendaButton.addEventListener("click", function () {
+          const startDate = new Date('2024-05-11T20:30:00');
+          const endDate = new Date('2024-05-12T04:30:00');
+          const subject = encodeURIComponent("Cumple 15 Cata");
+          const location = encodeURIComponent("Ubicación del evento");
+          const description = encodeURIComponent("Descripción del evento");
+          const details = `dates=${startDate.toISOString()}/${endDate.toISOString()}&location=${location}&text=${subject}&details=${description}&reminders=60`;
 
+          window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&${details}`);
+        });
+      });
     </script>
+
 
 <!-- Enlaces a los archivos JavaScript y las bibliotecas de iconos -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
